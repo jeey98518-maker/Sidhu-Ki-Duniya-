@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIDHU KI DUNIYA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* PASSWORD PAGE */
+#loginPage{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600')
+center/cover no-repeat;
+position:relative;
+}
+
+#loginPage::before{
+content:"";
+position:absolute;
+inset:0;
+backdrop-filter:blur(8px);
+background:rgba(0,0,0,0.4);
+}
+
+.login-box{
+position:relative;
+z-index:1;
+width:400px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:30px;
+text-align:center;
+color:white;
+box-shadow:0 0 25px rgba(255,255,255,0.3);
+}
+
+.login-box h2{
+font-size:35px;
+margin-bottom:15px;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+margin:15px 0;
+font-size:16px;
+}
+
+.login-box button{
+padding:12px 30px;
+border:none;
+border-radius:10px;
+background:#00b894;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+.login-box button:hover{
+background:#009d7d;
+}
+
+#error{
+margin-top:10px;
+color:#ff7675;
+}
+
+/* MAIN WEBSITE */
+#mainSite{
+display:none;
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#4e54c8);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+min-height:100vh;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+h1{
+font-family:'Great Vibes', bold;
+font-size:50px;
+margin-top:20px;
+text-shadow:0 0 20px cyan;
+}
+
+.double-line{
+width:250px;
+margin:10px auto 20px;
+border-top:4px solid white;
+border-bottom:4px solid cyan;
+height:10px;
+}
+
+.welcome{
+font-size:30px;
+font-weight:600;
+margin-bottom:40px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,255,255,0.5);
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+.text-box{
+margin-top:40px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+font-size:18px;
+line-height:1.8;
+}
+</style>
+</head>
+<body>
+
+<!-- PASSWORD PAGE -->
+<div id="loginPage">
+<div class="login-box">
+<h2>SIDHU</h2>
+<p>This website is only for my personal use </p>
+<p> Enter password to continue <p>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="checkPassword()">Enter</button>
+
+<p id="error"></p>
+</div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="mainSite">
+
+<div class="container">
+
+<h1>SIDHU</h1>
+
+<div class="double-line"></div>
+
+<div class="welcome">
+✨ Welcome To Sidhu Ki Duniya ✨
+</div>
+<div class="gallery">
+<img src="Picsart_26-03-14_19-30-39-200.png=1">
+<img src="Picsart_26-03-15_07-20-39-231.png=2">
+<img src="Picsart_26-03-14_19-48-56-590.png=3">
+<img src="Screenshot_20260318-202247.png=4">
+<img src="FB_IMG_1776515037159.jpg=5">
+<img src="FB_IMG_1776515045284.jpg=6">
+<img src="Screenshot_20260318-202216.png=7">
+<img src="IMG-20260513-WA0020.jpg=8">
+<img src="2026031614030307.png=9">
+<img src="qx2qt35ydnrmw0cx0fb9shmqhr_preview_0-ezremove (2).jpg=10">
+<img src="Screenshot_20260213-210819.jpg=11">
+<img src="1773627590864.jpg=12">
+<img src="Screenshot_20260318-202216.png=13">
+<img src="1773627801156.jpg=14">
+<img src="1770954127662.jpg=15">
+<img src="PRI09498.JPG=16">
+<img src="PRI09515.JPG=17">
+<img src="PRI09594.JPG=18">
+<img src="PRI09512.JPG=19">
+<img src="1773495725277.jpg= 20">
+</div>
+
+
+<div class="text-box">
+<h2>About Sidhu Ki Duniya</h2>
+<br>
+<p>
+Welcome to SIDHU KI DUNIYA, a place that create by Sidhu 
+This is not a website it's my dream and I want to full fill my dream with my codes.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function checkPassword(){
+let pass=document.getElementById("password").value;
+
+if(pass==="Sidhu_088"){
+document.getElementById("loginPage").style.display="none";
+document.getElementById("mainSite").style.display="block";
+}
+else{
+document.getElementById("error").innerHTML="❌~Puchh lo password Siddharth se🫠!";
+}
+}
+</script>
+
+</body>
+</html>
